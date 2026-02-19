@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Truefunded | Elite Prop Trading Firm</title>
@@ -14,15 +15,81 @@ body{background:#0b0b12;color:white;}
 h1,h2,h3{font-family:'Orbitron',sans-serif;}
 section{padding:80px 8%;}
 a{cursor:pointer;text-decoration:none;}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:bold;
+color:#bb86fc;
+}
+
+.logo img{
+height:40px;
+}
+
 
 /* NAVBAR */
-nav{position:fixed;width:100%;top:0;left:0;display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:rgba(10,10,20,0.95);z-index:1000;border-bottom:1px solid #6a00ff33;}
-.logo{font-size:24px;font-weight:800;color:#9d4edd;}
-nav ul{display:flex;gap:30px;list-style:none;}
-nav ul li a{color:white;transition:0.3s;}
-nav ul li a:hover{color:#bb86fc;}
-.cta{background:linear-gradient(45deg,#6a00ff,#bb86fc);padding:10px 25px;border-radius:30px;color:white;font-weight:600;transition:0.3s;}
-.cta:hover{transform:scale(1.05);}
+nav{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(10,10,20,0.95);
+z-index:1000;
+border-bottom:1px solid #6a00ff33;
+}
+
+/* LOGO SECTION */
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:22px;
+font-weight:800;
+color:#9d4edd;
+}
+
+.logo img{
+height:40px;
+width:auto;
+}
+
+/* MENU */
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+transition:0.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#bb86fc;
+}
+
+/* BUTTON */
+.cta{
+background:linear-gradient(45deg,#6a00ff,#bb86fc);
+padding:10px 25px;
+border-radius:30px;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.cta:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #6a00ff;
+}
 
 /* HERO */
 .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at top,#1a0033,#0b0b12 60%);}
@@ -107,7 +174,10 @@ color:#111;
 <body>
 
 <nav>
-<div class="logo">TRUEFUNDED</div>
+<div class="logo">
+<img src="logo.png" alt="TrueFunded Logo">
+<span>TRUEFUNDED</span>
+</div>
 <ul>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#payout">Payouts</a></li>
