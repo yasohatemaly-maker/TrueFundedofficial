@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truefunded | Elite Prop Trading Firm</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0b0b12;color:white;}
+h1,h2,h3{font-family:'Orbitron',sans-serif;}
+section{padding:80px 8%;}
+a{cursor:pointer;text-decoration:none;}
+
+/* NAVBAR */
+nav{position:fixed;width:100%;top:0;left:0;display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:rgba(10,10,20,0.95);z-index:1000;border-bottom:1px solid #6a00ff33;}
+.logo{font-size:24px;font-weight:800;color:#9d4edd;}
+nav ul{display:flex;gap:30px;list-style:none;}
+nav ul li a{color:white;transition:0.3s;}
+nav ul li a:hover{color:#bb86fc;}
+.cta{background:linear-gradient(45deg,#6a00ff,#bb86fc);padding:10px 25px;border-radius:30px;color:white;font-weight:600;transition:0.3s;}
+.cta:hover{transform:scale(1.05);}
+
+/* HERO */
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at top,#1a0033,#0b0b12 60%);}
+.hero h1{font-size:55px;max-width:800px;margin-bottom:20px;}
+.hero span{color:#bb86fc;}
+.hero p{color:#aaa;max-width:600px;margin-bottom:30px;}
+.hero-buttons{display:flex;gap:20px;}
+
+/* CHALLENGES */
+.challenge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;}
+.card{background:#111122;padding:30px;border-radius:20px;border:1px solid #6a00ff44;transition:0.3s;position:relative;}
+.card:hover{transform:translateY(-8px);border-color:#bb86fc;}
+.card h3{margin-bottom:15px;color:#bb86fc;}
+.card ul{list-style:none;margin-top:15px;}
+.card ul li{margin-bottom:8px;color:#bbb;}
+.price{font-size:28px;font-weight:700;margin-top:20px;}
+.badge{position:absolute;top:15px;right:15px;background:#bb86fc;color:#111;padding:5px 12px;border-radius:10px;font-size:12px;font-weight:700;}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin-top:40px;}
+th,td{padding:15px;border:1px solid #6a00ff44;text-align:center;}
+th{background:#1a0033;color:#bb86fc;}
+
+/* PAYOUT */
+.payout{text-align:center;background:#140026;border-radius:20px;}
+
+/* TESTIMONIALS */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.testimonial{background:#111122;padding:25px;border-radius:20px;border:1px solid #6a00ff44;}
+
+/* FAQ */
+.faq-item{margin-bottom:20px;border-bottom:1px solid #6a00ff44;padding-bottom:15px;cursor:pointer;}
+.faq-item h4{display:flex;justify-content:space-between;}
+.faq-item p{display:none;color:#bbb;margin-top:10px;}
+
+/* DASHBOARD */
+.dashboard{background:#0a0015;padding:50px;border-radius:20px;margin-top:30px;}
+.dashboard h3{color:#bb86fc;margin-bottom:20px;}
+.dashboard ul{list-style:none;}
+.dashboard ul li{padding:12px 0;border-bottom:1px solid #6a00ff44;}
+
+/* AFFILIATE */
+.affiliate{background:#140026;padding:40px;border-radius:20px;}
+.affiliate h3{color:#bb86fc;margin-bottom:20px;}
+.affiliate-table{width:100%;border-collapse:collapse;}
+.affiliate-table th, .affiliate-table td{padding:12px;border:1px solid #6a00ff44;text-align:center;}
+
+/* FOOTER */
+footer{background:#0a0015;text-align:center;padding:40px;border-top:1px solid #6a00ff44;color:#777;}
+
+/* RESPONSIVE */
+@media(max-width:768px){.hero h1{font-size:38px;}}
+.tab-btn{
+background:#111122;
+color:white;
+border:1px solid #6a00ff44;
+padding:12px 25px;
+cursor:pointer;
+border-radius:10px;
+}
+
+.tab-btn.active{
+border-color:#bb86fc;
+box-shadow:0 0 15px #6a00ff;
+}
+
+.size-btn{
+background:#1a0033;
+color:white;
+border:1px solid #6a00ff44;
+padding:8px 18px;
+cursor:pointer;
+border-radius:8px;
+}
+
+.active-size{
+background:#bb86fc;
+color:#111;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">TRUEFUNDED</div>
+<ul>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#payout">Payouts</a></li>
+<li><a href="#dashboard">Dashboard</a></li>
+<li><a href="#affiliate">Affiliate</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="terms.html">Terms</a></li>
+</ul>
+<a href="#" class="cta">Start Challenge</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Trade Up To <span>$400,000</span> In Capital</h1>
+<p>Truefunded (Est. 2026) is a premier prop firm dedicated to empowering the next generation of global traders. We provide the capital, cutting-edge technology, and institutional-grade conditions necessary for disciplined traders to scale. At Truefunded, we don't just fund accounts; we invest in talent.Your edge, our capital. Let’s grow.
+</p>
+<div class="hero-buttons">
+<a href="#" class="cta">Get Funded</a>
+<a href="#challenges" class="cta" style="background:#1a0033;">View Programs</a>
+</div>
+</section>
+
+<!-- CHALLENGES -->
+<section id="challenges">
+<h2 style="text-align:center;">Funding Programs</h2>
+
+<div style="text-align:center;margin-top:40px;">
+
+<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:30px;">
+<button class="tab-btn active" onclick="switchTab('one')">1-Step Challenge</button>
+<button class="tab-btn" onclick="switchTab('instant')">Instant Funded</button>
+<button class="tab-btn" onclick="switchTab('reboot')">
+Reboot Challenge <span class="badge">MOST PROFITABLE</span>
+</button>
+</div>
+
+<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px;">
+<button class="size-btn active-size" onclick="selectSize(10000)">$10K</button>
+<button class="size-btn" onclick="selectSize(25000)">$25K</button>
+<button class="size-btn" onclick="selectSize(50000)">$50K</button>
+<button class="size-btn" onclick="selectSize(100000)">$100K</button>
+<button class="size-btn" onclick="selectSize(200000)">$200K</button>
+</div>
+
+<div style="max-width:700px;margin:auto;background:#111122;padding:30px;border-radius:20px;border:1px solid #6a00ff44;">
+<h3 id="accountTitle">$10,000 Account</h3>
+
+<table>
+<tr><td>Trading Period</td><td>Unlimited</td></tr>
+<tr><td>Max Daily Loss</td><td id="daily">4%</td></tr>
+<tr><td>Max Drawdown</td><td id="overall">7%</td></tr>
+<tr><td>Profit Target</td><td id="target">10%</td></tr>
+<tr><td>Profit Split</td><td id="split">85%</td></tr>
+<tr><td>Leverage</td><td id="leverage">1:100</td></tr>
+<tr><td>Fee</td><td id="price">$90</td></tr>
+</table>
+
+<a href="#" class="cta" style="display:inline-block;margin-top:20px;">Start Challenge</a>
+</div>
+
+</div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+<h2 style="text-align:center;">Program Comparison</h2>
+<table>
+<tr>
+<th>Feature</th>
+<th>1-Step</th>
+<th>Instant</th>
+<th>Reboot</th>
+</tr>
+<tr>
+<td>Profit Split</td>
+<td>85%</td>
+<td>80%</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Max Drawdown</td>
+<td>8%</td>
+<td>6%</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>Leverage</td>
+<td>1:100</td>
+<td>1:50</td>
+<td>1:75</td>
+</tr>
+</table>
+</section>
+
+<!-- PAYOUT -->
+<section id="payout" class="payout">
+<h2>Fast & Reliable Payouts</h2>
+<p>Get paid every 14 days via crypto, bank transfer, or Rise in under 24 hours.  No hidden rules.</p>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+<h2 style="text-align:center;">Trader Dashboard</h2>
+<div class="dashboard">
+<h3>Welcome, Nady Aoun</h3>
+<ul>
+<li>Account Balance: $25,000</li>
+<li>Open Positions: 2</li>
+<li>Profit/Loss: $1,200</li>
+<li>Next Payout: Feb 28, 2026</li>
+<li>Reboot Attempts Remaining: 1</li>
+</ul>
+<a href="#" class="cta">Deposit / Upgrade</a>
+</div>
+</section>
+
+<!-- AFFILIATE -->
+<section id="affiliate">
+<h2 style="text-align:center;">Affiliate System</h2>
+<div class="affiliate">
+<h3>Referral Dashboard</h3>
+<table class="affiliate-table">
+<tr><th>Referral</th><th>Status</th><th>Earnings</th></tr>
+<tr><td>Trader123</td><td>Active</td><td>$120</td></tr>
+<tr><td>FXMaster</td><td>Active</td><td>$75</td></tr>
+<tr><td>ProfitGuru</td><td>Pending</td><td>$0</td></tr>
+</table>
+<p style="margin-top:20px;">Share your referral link: <span style="color:#bb86fc;">https://truefunded.com/ref/Nady Aoun</span></p>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+<h2 style="text-align:center;">What Traders Say</h2>
+<div class="testimonials">
+<div class="testimonial">
+<p>"The most transparent prop firm I've traded with."</p>
+<strong>- Elam H.</strong>
+</div>
+<div class="testimonial">
+<p>"Payouts arrived exactly on time. Highly recommended."</p>
+<strong>- Omar H.</strong>
+</div>
+<div class="testimonial">
+<p>"Professional dashboard and smooth experience."</p>
+<strong>- Nady A.</strong>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<h2 style="text-align:center;">FAQ</h2>
+<div class="faq-item">
+<h4>How do payouts work? <span>+</span></h4>
+<p>Payouts are processed in under 24 hours bi-weekly after your first profitable cycle while respecting all rules.</p>
+</div>
+<div class="faq-item">
+<h4>Are there time limits? <span>+</span></h4>
+<p>No maximum time limits, although minimum of 3 trading days to pass a challenge and 5 trading days in the funded phase to request a payout</p>
+</div>
+<div class="faq-item">
+<h4>What platforms are supported? <span>+</span></h4>
+<p>Matchtrader and trade locker.</p>
+</div>
+</section>
+
+<footer>
+© 2026 Truefunded. All Rights Reserved.
+</footer>
+
+<script>
+/* FAQ Toggle */
+document.querySelectorAll('.faq-item').forEach(item=>{
+item.addEventListener('click',()=>{
+let p=item.querySelector('p');
+p.style.display = p.style.display === 'block' ? 'none':'block';
+});
+});
+let currentTab="one";
+let currentSize=10000;
+
+const basePrices={
+10000:90,
+25000:160,
+50000:199,
+100000:299,
+200000:399
+};
+
+function switchTab(tab){
+currentTab=tab;
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+updateTable();
+}
+
+function selectSize(size){
+currentSize=size;
+document.querySelectorAll('.size-btn').forEach(b=>b.classList.remove('active-size'));
+event.target.classList.add('active-size');
+updateTable();
+}
+
+function updateTable(){
+let price=basePrices[currentSize];
+let daily="4%";
+let overall="7%";
+let target="10%";
+let split="85%";
+let leverage="1:100";
+
+if(currentTab==="instant"){
+price=Math.round(price*1.35);
+target="No Target";
+leverage="1:50";
+}
+
+if(currentTab==="reboot"){
+daily="3%";
+overall="6%";
+target="12%";
+split="90%";
+leverage="1:75";
+}
+
+document.getElementById("accountTitle").innerText="$"+currentSize.toLocaleString()+" Account";
+document.getElementById("daily").innerText=daily;
+document.getElementById("overall").innerText=overall;
+document.getElementById("target").innerText=target;
+document.getElementById("split").innerText=split;
+document.getElementById("leverage").innerText=leverage;
+document.getElementById("price").innerText="$"+price;
+}
+
+updateTable();
+
+</script>
+
+</body>
+</html>
