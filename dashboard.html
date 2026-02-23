@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TrueFunded | Dashboard</title>
+</head>
+<body style="background:#0b0b12;color:white;font-family:Poppins;padding:60px;">
+
+<h2>Your Funded Accounts</h2>
+
+<div style="margin-top:30px;display:flex;gap:20px;flex-wrap:wrap;">
+
+<div onclick="loadAccount(10000)" style="cursor:pointer;background:#111122;padding:30px;border-radius:15px;border:1px solid #6a00ff44;">
+$10,000 Account
+</div>
+
+<div onclick="loadAccount(50000)" style="cursor:pointer;background:#111122;padding:30px;border-radius:15px;border:1px solid #6a00ff44;">
+$50,000 Account
+</div>
+
+</div>
+
+<div id="stats" style="margin-top:40px;"></div>
+
+<script>
+function loadAccount(size){
+document.getElementById("stats").innerHTML = `
+<h3>$${size.toLocaleString()} Account Stats</h3>
+<ul>
+<li>Balance: $${size}</li>
+<li>Profit: $1,240</li>
+<li>Daily Drawdown Used: 1.2%</li>
+<li>Overall Drawdown Used: 3.4%</li>
+<li>Next Payout: 14 Days</li>
+</ul>
+`;
+}
+</script>
+
+</body>
+</html>
