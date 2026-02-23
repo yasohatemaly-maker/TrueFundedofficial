@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -246,7 +247,7 @@ html{
 
 <!-- HERO -->
 <section class="hero">
-<h1>Trade Up To <span>$400,000</span> In Capital</h1>
+<h1>Trade Up To <span>$1,000,000+</span> In Capital</h1>
 <p>Truefunded (Est. 2026) is a premier prop firm dedicated to empowering the next generation of global traders. We provide the capital, cutting-edge technology, and institutional-grade conditions necessary for disciplined traders to scale. At Truefunded, we don't just fund accounts; we invest in talent.Your edge, our capital. Let’s grow.
 </p>
 <div class="hero-buttons">
@@ -443,6 +444,13 @@ document.getElementById("price").innerText="$"+price;
 
 updateTable();
 
+</script>
+
+<script>
+const supabase = supabase.createClient(
+  "https://uvfsiqcrdocbujyeuoyy.supabase.co",
+  "sb_publishable_vDhenOiI5ivZpAuNlJ1yMA_2TXZIvqY"
+);
 </script>
 
 </body>
