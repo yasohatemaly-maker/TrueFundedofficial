@@ -10,18 +10,35 @@
 
 <div style="max-width:400px;margin:auto;background:#111122;padding:40px;border-radius:20px;border:1px solid #6a00ff44;">
 
-<input type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:15px;background:#1a0033;border:none;color:white;border-radius:8px;">
-<input type="password" placeholder="Password" style="width:100%;padding:12px;margin-bottom:20px;background:#1a0033;border:none;color:white;border-radius:8px;">
+<input type="email" id="email" placeholder="Email" required>
+<input type="password" id="password" placeholder="Password" required>
 
-<button onclick="login()" style="background:#6a00ff;padding:12px 25px;border:none;color:white;border-radius:8px;cursor:pointer;">
-Login
-</button>
+<button onclick="loginUser()">Login</button>
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
 <script>
-function login(){
-window.location.href="dashboard.html";
+const supabaseClient = supabase.createClient(
+  "https://uvfsiqcrdocbujyeuoyy.supabase.co",
+  "sb_publishable_vDhenOiI5ivZpAuNlJ1yMA_2TXZIvqY"
+);
+
+async function loginUser() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email: email,
+    password: password,
+  });
+
+  if (error) {
+    alert(error.message);
+  } else {
+    window.location.href = "dashboard.html";
+  }
 }
 </script>
 
