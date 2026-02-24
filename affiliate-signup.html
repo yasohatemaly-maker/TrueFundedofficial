@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Affiliate Register</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body style="background:#0b0b12;color:white;font-family:Poppins;text-align:center;padding-top:150px;">
+
+<h2>Create Affiliate Account</h2>
+
+<div style="max-width:400px;margin:auto;background:#111122;padding:40px;border-radius:20px;border:1px solid #6a00ff44;">
+
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="signupAffiliate()" style="background:#6a00ff;padding:12px 25px;border:none;color:white;border-radius:8px;cursor:pointer;width:100%;">
+Register
+</button>
+
+</div>
+
+<script>
+const supabaseClient = supabase.createClient(
+"https://uvfsiqcrdocbujyeuoyy.supabase.co",
+"sb_publishable_vDhenOiI5ivZpAuNlJ1yMA_2TXZIvqY"
+);
+
+async function signupAffiliate() {
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+
+const { data, error } = await supabaseClient.auth.signUp({
+email: email,
+password: password,
+});
+
+if(error){
+alert(error.message);
+} else {
+alert("Check your email to confirm registration.");
+window.location.href="affiliate-login.html";
+}
+}
+</script>
+
+</body>
+</html>
