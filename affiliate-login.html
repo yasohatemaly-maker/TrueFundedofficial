@@ -2,25 +2,92 @@
 <html>
 <head>
 <title>TrueFunded | Affiliate Login</title>
-</head>
-<body style="background:#0b0b12;color:white;font-family:Poppins;text-align:center;padding-top:150px;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<style>
+body{
+background:#0b0b12;
+color:white;
+font-family:Poppins;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:#111122;
+padding:40px;
+border-radius:20px;
+border:1px solid #6a00ff44;
+width:350px;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+background:#1a0033;
+border:none;
+color:white;
+border-radius:8px;
+}
+
+button{
+background:linear-gradient(45deg,#6a00ff,#bb86fc);
+padding:12px 25px;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+width:100%;
+font-weight:600;
+}
+
+button:hover{
+opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
 <h2>Affiliate Login</h2>
 
-<div style="max-width:400px;margin:auto;background:#111122;padding:40px;border-radius:20px;border:1px solid #6a00ff44;">
+<input type="email" id="email" placeholder="Email" required>
+<input type="password" id="password" placeholder="Password" required>
 
-<input type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:15px;background:#1a0033;border:none;color:white;border-radius:8px;">
-<input type="password" placeholder="Password" style="width:100%;padding:12px;margin-bottom:20px;background:#1a0033;border:none;color:white;border-radius:8px;">
+<button onclick="loginAffiliate()">Login</button>
 
-<button onclick="login()" style="background:#6a00ff;padding:12px 25px;border:none;color:white;border-radius:8px;cursor:pointer;">
-Login
-</button>
-
+<p style="margin-top:15px;font-size:14px;">
+Don't have an account? <a href="affiliate-signup.html" style="color:#bb86fc;">Register</a>
+</p>
 </div>
 
 <script>
-function login(){
-window.location.href="affiliate.html";
+const supabaseClient = supabase.createClient(
+"https://uvfsiqcrdocbujyeuoyy.supabase.co",
+"sb_publishable_vDhenOiI5ivZpAuNlJ1yMA_2TXZIvqY"
+);
+
+async function loginAffiliate() {
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+
+const { data, error } = await supabaseClient.auth.signInWithPassword({
+email: email,
+password: password,
+});
+
+if (error) {
+alert(error.message);
+} else {
+window.location.href = "affiliate.html";
+}
 }
 </script>
 
