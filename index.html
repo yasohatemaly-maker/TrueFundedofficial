@@ -297,37 +297,6 @@ Reboot Challenge <span class="badge">MOST PROFITABLE</span>
 </div>
 </section>
 
-<!-- COMPARISON -->
-<section>
-<h2 style="text-align:center;">Program Comparison</h2>
-<table>
-<tr>
-<th>Feature</th>
-<th>1-Step</th>
-<th>Instant</th>
-<th>Reboot</th>
-</tr>
-<tr>
-<td>Profit Split</td>
-<td>85%</td>
-<td>80%</td>
-<td>90%</td>
-</tr>
-<tr>
-<td>Max Drawdown</td>
-<td>8%</td>
-<td>6%</td>
-<td>6%</td>
-</tr>
-<tr>
-<td>Leverage</td>
-<td>1:100</td>
-<td>1:50</td>
-<td>1:75</td>
-</tr>
-</table>
-</section>
-
 <!-- PAYOUT -->
 <section id="payout" class="payout">
 <h2>Fast & Reliable Payouts</h2>
@@ -374,6 +343,119 @@ Reboot Challenge <span class="badge">MOST PROFITABLE</span>
 </div>
 </section>
 
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <h2>Contact TrueFunded</h2>
+  <p class="contact-sub">
+    Have questions? Our support team is ready to assist you.
+  </p>
+
+  <div class="contact-wrapper">
+
+    <div class="contact-info">
+      <h3>Email Support</h3>
+      <p>support@truefunded.co.site</p>
+
+      <h3>Business Hours</h3>
+      <p>Monday - Friday</p>
+      <p>9:00 AM – 6:00 PM (GMT)</p>
+    </div>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+#contact {
+  padding: 100px 10%;
+  background: #0d0d14;
+  color: white;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-sub {
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-info {
+  text-align: left;
+  min-width: 250px;
+}
+
+.contact-info h3 {
+  margin-top: 20px;
+  color: #8f3cff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  background: #14141c;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  color: white;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #7b2cff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: #a060ff;
+  box-shadow: 0 0 15px #7b2cff;
+}
+</style>
+
+<script>
+function sendMessage(e) {
+  e.preventDefault();
+  alert("Thank you for contacting TrueFunded. Our support team will respond shortly.");
+}
+</script>
+    
 <footer>
 © 2026 Truefunded. All Rights Reserved.
 </footer>
