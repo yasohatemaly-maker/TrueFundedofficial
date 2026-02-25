@@ -425,12 +425,31 @@ target="No Target";
 leverage="1:50";
 }
 
-if(currentTab==="reboot"){
-daily="3%";
-overall="6%";
-target="12%";
-split="90%";
-leverage="1:75";
+if(currentTab === "reboot"){
+
+    daily = "3%";
+    overall = "6%";
+    target = "12%";
+    split = "90%";
+    leverage = "1:75";
+
+    // Monthly Pricing Based On Account Size
+    if(accountSize === 10000){
+        price = "$120 / month";
+    }
+    else if(accountSize === 25000){
+        price = "$200 / month";
+    }
+    else if(accountSize === 50000){
+        price = "$230 / month";
+    }
+    else if(accountSize === 100000){
+        price = "$330 / month";
+    }
+    else if(accountSize === 200000){
+        price = "$430 / month";
+    }
+
 }
 
 document.getElementById("accountTitle").innerText="$"+currentSize.toLocaleString()+" Account";
