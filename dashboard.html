@@ -2,6 +2,11 @@
 style="background:#6a00ff;padding:10px 20px;border:none;color:white;border-radius:8px;cursor:pointer;">
 Logout
 </button>
+
+async function logoutUser(){
+await supabaseClient.auth.signOut();
+window.location.href="dashboard-login.html";
+}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script>
